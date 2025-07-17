@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Tables -->
+  <!-- 
+    Tables are used to represent real life table data
+      Home  | Roll no  -> Row1
+      Home  | Roll no  -> Row2
+      Home  | Roll no
+      Home  | Roll no
+    column1   column2
+    -->
+  <table border="1"> <!--Table tag creates a table but border gives the box outline-->
+    <caption>Food Menu</caption> <!--Caption gives the heading of the table if we want to add any-->
+    <!--The first tr creates the heading of the table -->
+    <thead>
+      <tr> <!--Displays table row-->
+        <th>Item</th> <!--displays table Header 1-->
+        <th>Price</th> <!--displays table Header2-->
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frooti</td> <!--displays table Data1-->
+        <td>10</td> <!--displays table Data2-->
+      </tr>
+      <tr>
+        <td>Samosa</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>Chips</td>
+        <td>15</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Sum</td>
+        <td>37</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <br>
+  <br>
+
+  <!-- Rowspan and columnspan -->
+  <!-- 
+  span means how much area a data covers 1 row and 1 col
+  Example: the table here has 2 cols i.e item and price and both come under same row but price col has internally 1 row and 2 different cols i.e INR and USD and item row covers 2 rows and 1 col
+   -->
+  <table border="1">
+    <caption>Food menu</caption>
+    <thead>
+      <tr>
+        <th rowspan="2">Item</th>
+        <th colspan="2">Price</th>
+      </tr>
+      <tr>
+        <th>INR</th>
+        <th>USD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sum</td>
+        <td>37</td>
+        <td>0.12</td>
+      </tr>
+      <tr>
+        <td>Sum</td>
+        <td>37</td>
+        <td>0.12</td>
+      </tr>
+      <tr>
+        <td>Sum</td>
+        <td>37</td>
+        <td>0.12</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+
+  <table border="1">
+    <caption>A test table with merged cells</caption>
+    <thead>
+      <tr>
+        <th rowspan="2"></th>
+        <th colspan="2">Average</th>
+        <th rowspan="2">Red eyes</th>
+      </tr>
+      <tr>
+        <th>Height</th>
+        <th>Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Males</td>
+        <td>1.9</td>
+        <td>0.003</td>
+        <td>40%</td>
+      </tr>
+      <tr>
+        <td>Female</td>
+        <td>1.7</td>
+        <td>0.002</td>
+        <td>43%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+  <!-- Forms -->
+  <!-- Form content -->
+  <!-- Action attribute is used to define what action needs to be performed when a form is submitted or where form data should be sent -->
+  <form action="/action">
+    <!-- Form elements such as 
+       input element 
+       -used to create multiple form controls 
+       -there are multiple types of input that can   be created using type attribute
+       -->
+    <!-- Placeholder attribute used to show the random text in the input before we type anything -->
+    <!-- Label element used o represent a caption for the itein user interface -->
+    <div>
+      <label>
+        Username
+        <input placeholder="Enter username">
+        <button type="reset">Reset</button>
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        Name
+        <input type="text" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        Password
+        <input type="password" placeholder="Password">
+        <button type="button">Button</button>
+      </label>
+    </div>
+    <br>
+    <br>
+    <input type="number" placeholder="Phone number">
+    <br>
+    <br>
+    <input type="time" placeholder="Enter time">
+    <br>
+    <br>
+    <input type="color" placeholder="Enter colour">
+    <br>
+    <br>
+    <!-- for=id(unique name for each input) have same value -->
+    <label for="username">Enter your name: </label>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button>Submit</button>
+    <br>
+    <br>
+    <!-- Button using input -->
+    <input type="submit">
+    <input type="button" value="Click me">
+  </form>
+</body>
+
+</html>
