@@ -1,0 +1,182 @@
+/* Universal Selector  */
+/* 
+To select everything in a document 
+Ex: 
+   *{
+     property:value;
+   }
+  (* is the universal selector)
+*/
+*{
+    font-family: 'Courier New', Courier, monospace;
+    /* background-color:bisque; */
+}
+
+/* Element Selector */
+/* 
+Selects all elements of same type
+  h1{
+    property:value;
+   }
+*/
+h3{
+    color: brown;
+}
+
+/* ID Selector */
+/* 
+Selects an element based on the value of the element's ID attribute.Each element has it's unique ID for better clarity.
+Ex: 
+  #myID{
+    property:value;
+  }
+*/
+#login{
+    background-color: blanchedalmond;
+    color: brown;
+}
+#signup{
+    background-color: bisque;
+    color: black;
+}
+
+/* Class Selector */
+/* 
+Selects an element based on their class attribute.One or more elements can have same class attribute.
+Ex: 
+  .myclass{
+    property:value;
+  }
+*/
+.follow{
+    color: chocolate;
+}
+
+/* Descendent Selectors */
+/* 
+Selects all paragraphs inside div
+Ex: 
+  div p{
+    property:value;
+  }
+*/
+/* p a{
+    color: rgb(128, 113, 93);
+} or we can write */ 
+.post a{
+    color: blanchedalmond;
+    background-color: brown;
+}
+nav ul li a{
+    color: plum;
+}
+
+/* Adjacent sibling combinator */
+/*
+Ex: 
+ H3 that comes immediately after any paragraph
+ p + h3{
+    property:value;
+  }
+*/
+p + h3{
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* Child combinator */
+/*
+Ex: 
+Selects all the buttons which are direct children of span 
+ span > button{
+    property:value;
+  }
+*/
+span > button{
+  background-color: darkred;
+}
+
+/* Attribute Selector */
+/* 
+Selects elements based on the pressure or value of given attribute
+ input[attr="value"]{
+    property:value;
+  }
+*/
+input[type="text"]{
+  color: firebrick;
+}
+input[type="password"]{
+  color: cornflowerblue;
+}
+
+/* Pseudo Class */
+/* 
+A keyword added to a selector that specifies a special state of the selected elements
+*/
+/* Hover is the moving arrow around our website */
+button:hover{
+  color: bisque;
+  background-color:black;
+}
+h3:hover{
+  text-decoration: none;
+}
+/* p:hover{
+  font-weight: 1000;
+  color: darkolivegreen;
+} */
+
+/* Active occurs when a button is clicked it is actived or any link clicked that means until we have stoped clicking*/
+button:active{
+  background-color: darkgreen;
+}
+p:active{
+  font-weight: 1000;
+  color: darkolivegreen;
+}
+
+/* Checked is used for radio or checkboxes to tick its done */
+input[type="radio"]:checked + label{
+  color: brown;
+  font-weight: bold;
+}
+
+/* nth-of-type helps you select the nth element */
+/* div:nth-of-type(2){
+  background-color: beige;
+} */
+div:nth-of-type(2n){
+  background-color: beige;
+}
+
+/* Pseudo elements */
+/* 
+A keyword added to a selector that lets you style a specific part of the selected elements
+*/
+/* first-letter helps us to select and style first letter of any element */
+h1::first-letter{
+  color: brown;
+}
+
+/* First-line changes the style of first line of any element */
+p::first-line{
+  color: firebrick;
+}
+
+/* Selection pseudo element is used to change the style of the selected portions */
+p::selection{
+  background-color: bisque;
+}
+
+
+
+/* Cascading and specificity(not done) */
+
+/* !important */
+/* To show the most specific thing in document */
+h3{
+  background-color: beige !important;
+}
+
+/* Inhereitance in css(not done) */

@@ -1,0 +1,117 @@
+/* Box model in css */
+/* 
+
+B____________                                                               
+|  ___#____  |                                                           
+| |        | |    //B is the border of box                              
+|$|        | |    //#=width                                             
+| |        | |    //$=height                                            
+| |________| |    //*=padding(the distance between content and border)   
+|_____*______|                                                            
+      ↑ 
+      M           //M=margin(space between two adjacent boxes in horizontal line)
+      ↓ 
+B____________
+|  ___#____  |    
+| |        | |
+|$|        | | 
+| |        | |
+| |________| |
+|_____*______|
+
+
+*/
+
+/* 
+Height and width - By default,it sets the content area height and width of the element
+*/
+/* 
+Border sides - to control an indivisual side of the box
+*/
+/* 
+Border radius - used to round the corners of an element 's outer edge
+*/
+
+/* div{
+    height: 150px;
+    width: 500px; */
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: black; */
+    /* border: 5px solid black; */
+    /* border-right-color: darkred;
+    border-right-style: dashed; */
+    /* border-radius: 50%; */
+    /* border-radius: 15px; */
+    /* border-top-right-radius: 15px; */
+    /* padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}  */
+
+/* 
+Border - used to set an elements border not the content's border
+*/
+h1{
+    border-width: 2px;
+    border-style: dotted;
+    border-color: brown;
+    }
+    
+
+/* Padding(the space between content and border) */
+button{
+    border: 2px solid maroon;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+    /* padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px; */
+    /* top & bottom | left & right */
+    /* padding: 5px 35px; */
+    /* top | right | bottom | left (clockwise from top) */
+    padding: 5px 35px 5px 35px;
+}
+
+/* Margin property - to set spacing on outside of border */
+
+/* 
+Dispaly property - It sets whether an element is treated as a block or inline element and the layout used for its children
+*/
+h2{
+  display: inline;
+}
+/* span{
+    display: block;
+} */
+
+
+span{
+   border: 2px solid black;
+   height: 100px;
+   width: 200px;
+   padding: 50px;
+   margin: 20px;
+   background-color: brown;
+}
+
+/* div{
+    border: 2px solid black;
+    height: 100px;
+    width: 200px;
+    padding: 50px;
+    margin: 20px;
+ } */
+
+ /* Inline block styles blocks in horizontal way without lossing any other property */
+ div{
+    height: 200px;
+    width: 220px;
+    margin: 4px;
+    border: 2px solid black;
+    background-color: brown;
+    display: inline-block;
+ }
