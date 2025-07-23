@@ -1,0 +1,204 @@
+/* Alpha channel */
+/* 
+Sets the opacity(color transparensy) for a color ranges from 0 to 1 where 0 is the most transparent and 1 is solid color
+*/
+/* rgba (red,green,blue,alpha) */
+/* div{
+    height: 200px;
+    width: 200px;
+    background-color: rgba(97, 10, 10, 0.828);
+    border: 2px solid black;
+     transition-duration: 2s;
+    transition-delay: 1s;  
+    delay means the time duration it stays in that state after hover
+    margin: 0 auto;
+    transition: margin-top 2s ease-in 0.2s;
+    
+} */
+
+/* Opacity */
+/* 
+sets the opacity(element tranparency) for the element and range 0 to 1 where o is the most transparent
+*/
+
+/* Transitions */
+/* 
+It enables you to define the transition between two states of an element and it's shorthand are property name | duration |timing-function | delay 
+*/
+/* div:hover{
+    margin-top: 480px;
+    background-color: burlywood;
+     border-radius: 50%; 
+}  */
+
+/* Transform */
+/* 
+This property lets you rotate,scale,skew or translate an element
+*/
+/* Rotate property */
+section{
+    margin-top: 100px;
+}
+/* div{
+    height: 80px;
+    width: 250px;
+    background-color: rgba(97, 10, 10, 0.828);
+    border: 2px solid black;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+div:nth-of-type(2n){
+    background-color: burlywood;
+}
+div:nth-of-type(3n){
+    background-color: rgb(116, 79, 79);
+} */
+
+#one{
+    transform: rotate(45deg);
+}
+
+/* Scale property(increases and decreases the size) */
+#two{
+    /* transform: scale(0.5); */
+    transform: scale(2 , 0.5);
+}
+
+/* Translate(movement of element in x or y direction) */
+#three{
+    transform: translateX(200px);
+}
+
+/* Skew() */
+#four{
+    transform: skew(30deg);
+}
+
+/* Box shadow(It adds shadow effects around an element's frame x-offset y-offset blur radius color) */
+#five{
+    box-shadow: 2px 2px 8px black;
+}
+
+#me{
+    height: 500px;
+    width: 700px;
+    background-color:  rgb(61, 97, 63);
+    border: 2px solid black;
+    background-image: url("haotian-zheng-M0W93TYDoso-unsplash.jpg");
+    background-size: contain;
+}
+/* Background-size:contain/cover/auto */
+
+.card{
+    height: 300px;
+    width: 200px;
+    background-color: bisque;
+    margin-right: 50px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: 2px 2px 8px black;
+    transition: 2s;
+}
+
+img{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.card:hover{
+    box-shadow: 2px 2px 16px black;
+}
+
+/* Position */
+/* 
+It sets how an element is positioned in a document and the top,bottom,left,right properties determine the final location of postioned elements
+*/
+/* Static(The top,bottom,left,right and z-index properties have no effect.This is default value) */
+/* div{
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+    border: 2px solid black;
+    margin: 20px;
+    text-align: center;
+    display: inline-block;
+} */
+#static{
+    background-color: blanchedalmond;
+    position: static;
+    top: 100px;
+    left: 100px;
+}
+
+/* Relative(The offset is relative to itself based on the values of top,bottom,left and right) */
+#relative{
+    background-color: blanchedalmond;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+/*  */
+#absolute{
+    background-color: blanchedalmond;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+/*  */
+#fixed{
+    background-color: blanchedalmond;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+}
+
+#box{
+    height: 500px;
+    width: 500px;
+    background-color: beige;
+    border: 2px solid black;
+    margin: 0 auto ;
+    text-align: center;
+}
+#face{
+    height: 400px;
+    width: 400px;
+    background-color: yellow;
+    margin: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+#smile{
+    height: 90px;
+    width: 200px;
+    background-color: maroon;
+    border-radius: 0 0 80px 80px;
+    position: absolute;
+    top: 400px;
+    right: 370px;
+}
+#leyes, #reyes{
+ height:90px;
+ width: 90px;
+ background-color: black;
+ display: inline-block;
+ margin: 20px; 
+ border-radius: 50%;
+ position: absolute;
+ right: 370px;
+ top: 250px;
+}
+
+#leyes{
+    left: 340px;
+}
+
+#reyes{
+    right: 340px;
+}
