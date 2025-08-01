@@ -1,0 +1,234 @@
+ /* Grid */
+ /*
+ Grid line(the lines dividing the whole box into mini boxes are grid lines)
+ Grid cell(the small mini box is the grid cell)  
+ Grid track(The space between two horizontal or two vertical lines)
+ Grid area(the area between two horizontal and two vertical line)
+ Grid template rows & columns
+ */
+ #container1 {
+    height: auto;
+    width: auto;
+    background-color: bisque;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 120px 100px;
+    /* Creates two columns and converts the boxes are automatically sorted */
+    grid-template-rows: 100px 100px 100px;
+    row-gap: 20px;
+    column-gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+#b1{
+    height: 50px;
+    width: 50px;
+    /* grid-column: 1/2;
+    grid-row: 1/2; */
+    border: 2px solid maroon;
+    background-color: burlywood;
+}
+#b2{
+    height: 50px;
+    width: 50px;
+    border: 2px solid maroon;
+    background-color: burlywood;
+}
+#b3{
+    height: 50px;
+    width: 50px;
+    border: 2px solid maroon;
+    background-color: burlywood;
+}
+#b4{
+    height: 50px;
+    width: 50px;
+    /* grid-column: 1/2;
+    grid-row: 1/2; */
+    border: 2px solid maroon;
+    background-color: burlywood;
+}
+#b5{
+    height: 50px;
+    width: 50px;
+    border: 2px solid maroon;
+    background-color: burlywood;
+}
+
+#container2 {
+    height: 300px;
+    width: 935px;
+    background-color: rgb(110, 121, 72);
+    border: 2px solid black;
+    display: grid;
+    grid-template-areas: "nav nav nav"
+                         "side article article"
+                         "footer footer footer";
+}
+#bx1{
+   height: auto;
+   width: auto;
+    border: 2px solid maroon;
+    grid-area: nav;
+}
+#bx2{
+    height: auto;
+    width: auto;
+    border: 2px solid maroon;
+    grid-area: side;
+}
+#bx3{
+    height: auto;
+    width: auto;
+    border: 2px solid maroon;
+    grid-area: article;
+}
+#bx4{
+    height: auto;
+    width: auto;
+    border: 2px solid maroon;
+    grid-area: footer;
+}
+#bx5{
+    height: auto;
+    width: auto;
+    border: 2px solid maroon;
+    /* grid-area: footer; */
+}
+
+
+ /* Animations(To animate CSS elements) */
+ /* 
+@keyframe(template/layout) myName(my animation name){
+  from(initial frame){font-size:20px;}
+  to(ending frame){font-size:40px;}
+}
+*/
+ /* 
+To apply actual amination we use animation properties
+animation-name (name of the animation)
+animation-duration (duration of animation)
+animation-timing-function (types of animation like slow,fast etc)
+animation-delay (delay of animation)
+animation-iteration-count (number of times animation applies)
+animation-direction (movement of animation)-normal(to-fro),reverse(in opposite of normal),alternate,alternate-reverse
+*/
+
+ /*
+ Shorthand
+ animation:myNmae 2s(duration) linear(function) 3s(delay) infinte(iteration-count) normal(dirction)
+ */
+
+ /*
+% in Animation 
+@keyframe(template/layout) myName(my animation name){
+  0%(from){font-size:20px;}
+  50%{font-size:30px;}
+  100%(to){font-size:40px;}
+}
+*/
+ #boxes {
+     height: 300px;
+     width: 300px;
+     background-color: beige;
+     border: 2px solid black;
+     /* margin: 0 auto;
+    margin-top: 300px; */
+     top: 100px;
+     right: 100px;
+     position: absolute;
+     /* animation-name: colorAnimate;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+    animation-direction: normal; */
+     animation: colorAnimate 5s ease-in 1s infinite normal;
+ }
+
+ @keyframes colorAnimate {
+     /* from {
+         background-color: beige;
+         right: 0px;
+     }
+
+     to {
+         background-color: brown;
+         right: 600px;
+     } */
+    0% {
+        background-color: beige;
+        right: 0px;
+    }
+
+    50%{
+        background-color: rgb(130, 64, 96);
+    }
+
+    100% {
+        background-color: brown;
+        right: 600px;
+    }
+ }
+
+
+ /* Media Queries(Helps create a responsive website) */
+ div {
+     height: 100px;
+     width: 100px;
+     background-color: rgb(110, 121, 72);
+     border: 2px solid black;
+ }
+
+ @media (width:600px) {
+     div {
+         background-color: brown;
+     }
+ }
+
+ /* Max-width(Changes properties if width is less than or equal to 600px) and Min-width(Changes properties if width is more than or equal to 600px) */
+ @media (max-width:600px) {
+     div {
+         background-color: darkblue;
+     }
+ }
+
+ @media (min-width:700px) and (max-width:800px) {
+     div {
+         background-color: purple;
+     }
+ }
+
+
+ /* Z-index(It decides the stack level of elements and overlapping elements with a larger z-index cover those with a smaller one)*/
+ /* div{
+    height: 100px;
+    width: 100px;
+    background-color: aliceblue;
+    border: 2px solid black;
+    display: inline-block;
+    text-align: center;
+ }
+
+ #box1 {
+    position: static;
+ }
+
+ #box2{
+    position: relative;
+    top: 20px;
+    left: 10px;
+    z-index: 1;
+ }
+
+ #box3{
+    position: absolute;
+    top: 500px;
+    left: 20px;
+ }
+
+ #box3{
+    position: fixed;
+    top: 50px;
+    z-index: -3 ;
+ } */
