@@ -1,21 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Linking the js file externally -->
 </head>
+
 <body>
-    <!-- <h1>Hello world</h1> -->
-     <h1>To Do App</h1>
-     <h3>Enter "list" to show all tasks</h3>
-     <h3>Enter "add" to show all tasks</h3>
-     <h3>Enter "delete" to show all tasks</h3>
-     <h3>Enter "quit" to show all tasks</h3>
-    
-    <!-- <script src="03_Chapter3.js"></script> -->
-     <!-- <script src="04_Chapter4.js"></script> -->
-      <script src="Sample.js"></script>
+    <p class="odd">This is my body1</p>
+    <p id="second">This is my body2</p>
+    <p class="odd">This is my body3</p>
+    <p>This is my body4</p>
+    <button id="btn1">Toggle now</button>
+    <div id="id1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet cupiditate eius consectetur alias
+        voluptate ex accusamus. Ex quo amet nostrum vitae alias quae ratione quisquam facere! Illum odit, provident
+        nostrum explicabo, tenetur dolores esse aut quas nihil, a doloremque expedita distinctio. Quas voluptate beatae
+        deserunt maxime expedita, quisquam voluptatibus quae vitae nam dolores perspiciatis consectetur voluptates
+        praesentium est labore repellat doloribus sint culpa minus cupiditate accusantium veniam odio sequi. Consectetur
+        quos nam ex! Eaque minus doloribus asperiores distinctio molestiae vitae, a mollitia officia. Ut saepe unde,
+        nulla aspernatur inventore aliquid asperiores repellat perferendis quis eaque quidem ullam. Dolorem, harum
+        fugit.</div>
+
 </body>
+<script src="jquery.min.js"></script>
+<!-- <script src="myjquery.js"></script> -->
+<script>
+    $(document).ready(function () {
+        // all the jquery code will be here to make sure it is ready to be executed. 
+        // There are three main slectors in jquery ie
+        // 1.element selector
+        // 2.id selector
+        // 3.class selector   
+
+
+        console.log('we are using jquery'); // console.log($); or we can write this 
+        // jQue ry syntax looks like this.
+        // $('selector').action();
+
+        // 1.element selector
+        // Clicks on all p elements as here p is the element ie example of element selector
+        //$('p').click(); //clicked on p as in selector is p and the action to perform the operation is the click ie we selected p and clicked on it to see the output. 
+        $('p').click(function () {
+            console.log('you clicked on p', this);
+            // $(this).hide(); //It is used to hide the one we clicked on
+            // $('#id').hide();
+            // $('.class').hide();
+        }); // this clicks on the function to carry out the console in it
+
+
+        // 2.id selector
+        // $('#second').click();
+
+        //class selector
+        // $('.odd').click();
+
+        // other selectors
+        // $('*').click(); clicks on all elements mentioned
+        // $('p.odd').click(); clicks on all odd elements 
+        // $('p:first').click(); clicks on the first element
+
+        //jQuery Events
+        // 1.Mouse Events=click,dbclick,mouseenter,mouseleave
+
+        // Click is also an event that shows the output in console. 
+        // $('p').click(function () {
+        //     console.log('you clicked on p',this);
+        //     // $(this).hide(); //It is used to hide the one we clicked on
+        //     // $('#id').hide();
+        //     // $('.class').hide();
+        // }); 
+
+        //Prints that you have double clicked on double clicking the p
+        // $('p').dblclick(function () {
+        //     console.log('you double clicked on p',this);
+        //     // $(this).hide(); //It is used to hide the one we clicked on
+        //     // $('#id').hide();
+        //     // $('.class').hide();
+        // }); 
+
+        // Prints that mouse entered on the p and mouseleave also acts when we leave the p
+        // $('p').mouseenter(function () {
+        //     console.log('you entered: p',this);
+        //     // $(this).hide(); //It is used to hide the one we clicked on
+        //     // $('#id').hide();
+        //     // $('.class').hide();
+        // }); 
+
+        // Hover mentioned hover as many times as we move the mouse on that particular p.
+        // $('p').hover(function () {
+        //     console.log('you hovered on p',this);
+        //     // $(this).hide(); //It is used to hide the one we clicked on
+        //     // $('#id').hide();
+        //     // $('.class').hide();
+        // }); 
+
+
+        // 2.Keyboard Events=keypress,keydown,MediaKeyStatusMap
+        // 3.Form Events=sumbit,change,focus,blur
+        // 4.Document/Window Events=load,resize,scroll,unload
+
+        // Demoing the ON nethod
+        //     $('p').on({
+        //         click:function(){
+        //             console.log('Thanks for ');
+        //         },
+        //         mouseleave:function(){
+        //             console.log('Mouse leaved');
+
+        //         }
+        //     })
+
+        //     $('#id1').hide(1000,function(){
+        //         console.log('Hidden');
+
+        //     });
+        //     $('#id1').show(1000,function(){
+        //         console.log('Shown');
+        //     });
+
+        // $('#btn1').click(function() {
+        //     $('#id1').toggle(1000);
+        // })
+
+        // Functions 
+        // fadeIn(),fadeOut(),fadeToggle(),fadeTo()
+        // $('#btn1').click(function() {
+        //      $('#id1').fadeTo(1000);
+        //  })
+
+        // Slide methods have both speed(the time given to show or hide the element) and callback methods(the function part to add the console) are optional 
+        // $('#id1').slideDown(1000,function(){
+        //    console.log('Done');
+        // });
+        // $('#id1').slideUp(1000);
+        // $('#id1').slideToggle(1000);
+
+        // Animate function in jQuery
+        // $('#id1').animate({
+        //     opacity:0.3,
+        //     height:'150px',
+        //     width:'350px'
+        // },2000);
+
+        $('#id1').animate({
+            opacity:0.3
+        },3000);
+        $('#id1').animate({
+            opacity:0.9
+        },1000);
+        $('#id1').animate({
+            width:'300px'
+        },12000);
+    });
+</script>
+
 </html>
