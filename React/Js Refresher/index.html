@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var a=34;
+        // const a=45;
+        let a='This is me';
+        console.log(a);
+        // Numbers 
+        // Objects
+        let obj = {
+            r: 34,
+            m: 64,
+            func: function myFunc(number){
+                console.log("Number is "+number);
+                
+            }
+        }
+        // Booleans - true or false
+        // String
+        // Undefined
+        // Null
+        // Functions
+        function hello(){
+            console.log("Hey Amy"); 
+        }
+        // Events
+        document.addEventListener("click",function click(){
+            console.log("clicked");
+            // alert("Hey"); 
+            let confirm =confirm("Are you sure?");
+            console.log(confirm);
+        });
+        // for (let index = 0; index < array.length; index++) {
+        //     const element = array[index];
+        // }
+        let arr = [1,4,2,6,5];
+        console.log(this);
+        // function myFunc(number){
+        // console.log("Number is "+this);
+        // }
+        let myObj = {
+            a: this,
+            myFunc: (number) => {
+             console.log("Number is "+this);
+            }
+        }
+        myObj.myFunc();
+        console.log(myObj.a);
+        setTimeout(() => {
+            console.log("Yay");
+        },3000);
+        console.log("Main niche wala line hoon");
+    </script>
+</head>
+<body>
+    <h1>I am learning JS.</h1>
+</body>
+</html>
