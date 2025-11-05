@@ -1,0 +1,45 @@
+What is React 
+React = External library that helps us create websites easier
+
+1.External library - It is a code outside our computer or code that someone else wrote
+(An HTML code creates a website and how do we load js onto our website by using html element script nad other is by creating a new file and adding a html attribute src to include/add to html code)
+
+Why are there 2 external libraries for react?
+React and reactDOM 
+React is used in different places like making websites and mobile apps so the creators decided to divide it into 2 external libraries 
+React that has shared features used both websites and mobile apps 
+ReactDOM that has features specific to websites
+
+Using react to create websites = load React & ReactDOM
+
+Using react to create mobile apps = load React & React Native
+
+document.querySelector = used to get an html element from the website & put it into the js.This is a feature of js called DOM or the document object model,basically js gives us this document obj which sort of combines js and html & lets us get html elements from the page nad put it into the js & it also lets our js modify html elements on the page  
+
+ ReactDOM.createRoot(container) = It sets up the react & to set up react we have give an html element having class name so basically everything we create with react is going to be displayed inside html element.Everything inside this element will be controlled by react and react will affect anything outside this element
+
+ After setting up react we are going to use features of react one of the feature is render(means to display something so .render lets us display something inside this container or inside the element and inside the brackets we are going to tell react what we are going to display)
+
+
+ What is Babel?
+ It is a js compiler that translates other languages into js. In react we don't use normal js,we use an enhanced version of js called jsx 
+
+ JSX stands for javascript XML which is same as javascript but we can write html directly in our js code
+
+  const button = <button>Hello</button>
+  Creates a new button element inside our js and we can save it in a variable 
+
+  There is one problem with JSX that is our web browser doesn't understand JSX, only understands normal JS.In order to use JSX we need to translate it into normal JS first then web browser will understand.So we use Babel external library.Babel translates JSX to normal JS so web browser understands it
+
+  To use Babel, we need to do 2 steps:
+  load Babel external library 
+  to translate js we have to give script element an attribute type = text/babel
+
+
+  MORE FEATURES OF REACT 
+  Use React to display multiple elements on our website to do so we need to create an html element called div element 
+
+  Benefits of JSX
+  1.Creating website with react feels natural
+  2.Finds error easily
+  3.Inserts values inside JSX elements
