@@ -1,0 +1,23 @@
+COMPONENTS AND PROPS
+
+Component is a piece of the website
+For building our website we need to divide it into small components 
+
+The first component is the input text and the button to make it we need to create a function and the component name must start with capital letter.In JSX either we have closing tag or self closing element
+
+To display our component we need to insert our component inside the div variable so that react can display it on website.Two ways to display our content
+ {ChatInput()}
+    or
+ <ChatInput /> 
+
+ React has another way to put all together without creating an extra div called fragment <></>
+
+ PROPS 
+ every component function gets one parameter up inside the function to access the html attribute inside the react component.Props parameter is a object that contains all the attributes that we give to this component & it makes our component reusable
+
+ To use if-statements directly inside JSX we can't use if we need guard operator(&&)
+ Ex: const result = value1 && value2;
+ That means if value1 is true then the result will be value2, works just like if statement
+
+ Instead of using a variable to store our app it is best to create a component to create this app.The beat practice is to use component called app to create the website because it gives us access to extra features of components like props
+ 
