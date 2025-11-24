@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chatbot</title>
+</head>
+
+<body>
+
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+        function ChatInput() {
+            return (
+                <>
+                    <input
+                        placeholder="Send a message to Chatbot"
+                        size="30"
+                    />
+                    <button>Send</button>
+                </>
+            );
+        }
+
+        // function ChatMessage(props) {
+        function ChatMessage({ message, sender }) {
+            // console.log(props);
+            // const message = props.message; The shortcut =>
+            // const sender = props.sender;
+
+            // const { message, sender } = props; more shortcut to use message and sender in function directly
+
+
+            // if (sender === 'robot') {
+            //     return (
+            //         <div>
+            //             <img src="robot.png" width="50" />
+            //             {message}
+            //         </div>
+            //     );
+            // }
+
+            // We are going to learn how to use if statements directly inside JSX
+            // JSX
+            return (
+                <div>
+                    {sender === 'robot' && (
+                        <img src="robot.png" width="50" />
+                    )}
+                    {message}
+                    {sender === 'user' && (
+                        <img src="user.png" width="50" />
+                    )}
+                </div>
+            );
+        }
+
+
+// Now we don't need this variable as we copied it's content to the function
+        // const app = (
+            // <>
+            //     <ChatInput />
+            //     <ChatMessage
+            //         message="Hello Chatbot"
+            //         sender="user"
+            //     />
+            //     <ChatMessage
+            //         message="Hello! How can i help you?"
+            //         sender="robot"
+            //     />
+            //     <ChatMessage
+            //         message="Can you get todays date?"
+            //         sender="user"
+            //     />
+            //     <ChatMessage
+            //         message="Today is November 21"
+            //         sender="robot"
+            //     />
+            // </>
+        // );
+
+
+
+        // Component to create our app instead of using app variable using function.Here we can have components inside a component
+        function App() {
+            // This component will return all of this html in app variable
+            return (
+                //so that we can write it on multiple lines
+                <>
+                    <ChatInput />
+                    <ChatMessage
+                        message="Hello Chatbot"
+                        sender="user"
+                    />
+                    <ChatMessage
+                        message="Hello! How can i help you?"
+                        sender="robot"
+                    />
+                    <ChatMessage
+                        message="Can you get todays date?"
+                        sender="user"
+                    />
+                    <ChatMessage
+                        message="Today is November 21"
+                        sender="robot"
+                    />
+                </>
+            );
+        }
+
+        const container = document.querySelector('.js-container');
+        // ReactDOM.createRoot(container).render(app); //This is to display variable app 
+        ReactDOM.createRoot(container).render(<App />); //This is to display component app 
+
+    </script>
+</body>
+
+</html>
